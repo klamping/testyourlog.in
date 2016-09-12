@@ -2,16 +2,20 @@
 <html>
 <head>
   <title>Test Your Login! Automated automated test generator</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#bf1714">
+  <meta name="theme-color" content="#ffffff">
   <style>
     html, body {
       margin: 0;
       padding: 0;
-      height: 100%;
+      min-height: 100vh;
     }
 
     body {
-      height: auto;
-      min-height: 100%;
       background: url(bg.jpeg) no-repeat;
       background-size: cover;
       display: flex;
@@ -20,11 +24,12 @@
     }
 
     .container {
-      width: 95%;
+      width: 90%;
       max-width: 40em;
       border-radius: 5px 1px;
       background: rgba(240, 230, 230, .95);
       padding: 2em;
+      box-sizing: border-box;
       font-family: "Arial Rounded MT Bold","Helvetica Rounded",Arial,sans-serif
     }
 
@@ -57,28 +62,38 @@
       padding: 1em;
       border-radius: 5px 1px;
       background:#fff;
+      margin-top: 2em;
+      box-sizing: border-box;
     }
 
     .form-items {
       display: flex;
+      margin-top: 1em;
     }
+
     .form-item:first-child {
       flex: 5 1 auto;
     }
+    a {
+      color: #bf1714;
+    }
+    a:hover {
+      color: #e40d09;
+    }
     input.email {
       width: 100%;
-      border: 1px solid #333;
+      border: 1px solid #caa;
       font-size: 24px;
       padding: 5px 10px;
       box-sizing: border-box;
     }
     input.button {
       width: 100%;
-      border: 1px solid #333;
+      border: 1px solid #caa;
       font-size: 24px;
       padding: 5px 10px;
       box-sizing: border-box;
-      border-left: 0;
+      border-left-width: 0;
       cursor: pointer;
       background: #bf1714;
       color: #fff;
@@ -89,6 +104,27 @@
     input.button:focus {
       background: #e40d09;
     }
+
+    @media only screen and (max-width: 767px) {
+      body {
+        display: block;
+        min-height: 100%;
+      }
+      .container {
+        margin: 0 auto;
+        border-radius: 0;
+      }
+      .form-items {
+        flex-direction: column;
+      }
+      .form-item {
+        flex: 1 0 auto;
+      }
+      input.button {
+        border-left-width: 1px;
+        margin-top: .5em;
+      }
+    }
   </style>
 </head>
 <body>
@@ -97,7 +133,7 @@
     <h1>Testyourlog.in</h1>
     <h2>A generator to get you started with automated functional testing.</h2>
 
-    <p>Testyourlog.in will create for you a custom WebdriverIO test script for testing the login/registration process on your site. It will include installation instructions and be customized to your specific website, including URLs, elements and messages.</p>
+    <p>Testyourlog.in will create for you a custom <a href="http://webdriver.io">WebdriverIO</a> test script for testing the login/registration process on your site. It will include installation instructions and be customized to your specific website, including URLs, elements and messages.</p>
 
     <p>I just came up with this idea and need to develop the script. In the meantime, you can sign up to be notified when this is ready to go.</p>
 
@@ -113,9 +149,11 @@
                 <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_17d67d558ef439917f81518bc_183e1c02bc" tabindex="-1" value=""></div>
               </div>
               <div class="form-item">
-                <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+                <input type="submit" value="Sign Up" name="subscribe" id="mc-embedded-subscribe" class="button">
               </div>
             </div>
+            <br>
+            <p><em>I promise not to spam. This isn't signing you up for a regular mailing list, just a notification or two when the site launches.</em></p>
           </div>
       </form>
     </div>
