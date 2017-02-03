@@ -1,3 +1,6 @@
+https://stuk.github.io/jszip/documentation/examples.html
+https://github.com/blueimp/JavaScript-Templates
+
 var url = 'https://www.usaa.com';
 var formEl = '.login';
 var usernameEl = '.jusername';
@@ -11,10 +14,11 @@ var loggedInUrl = 'https://www.usaa.com/logged-in';
 var loginError = '';
 var missingUserNameError = '';
 
-fetch('/template/login.page.js')
-  .then(function () {
+var templates = 'path/to/templates'
 
-  });
-  
-  
-https://stuk.github.io/jszip/documentation/examples.html
+zip.file("test/login.js", loginFile);
+zip.file("test/login.page.js", loginPageFile);
+zip.folder("test/shots")
+zip.file("wdio.conf.js", wdioFile);
+zip.file("package.json", pkgJsonFile);
+zip.file("README", readmeFile);
