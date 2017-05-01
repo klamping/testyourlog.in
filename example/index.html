@@ -49,37 +49,11 @@
     .ready(function() {
       $('.ui.form')
         .form({
+          inline : true,
+          on     : 'blur',
           fields: {
-            email: {
-              identifier  : 'email',
-              rules: [
-                {
-                  type   : 'empty',
-                  prompt : 'Please enter your e-mail'
-                },
-                {
-                  type   : 'email',
-                  prompt : 'Please enter a valid e-mail'
-                },
-                {
-                  type   : 'is[valid@user.com]',
-                  prompt : 'Your username or password is incorrect'
-                }
-              ]
-            },
-            password: {
-              identifier  : 'password',
-              rules: [
-                {
-                  type   : 'empty',
-                  prompt : 'Please enter your password'
-                },
-                {
-                  type   : 'length[6]',
-                  prompt : 'Your password must be at least 6 characters'
-                }
-              ]
-            }
+            email: 'email',
+            password: 'empty'
           }
         })
       ;
@@ -101,7 +75,7 @@
         <div class="field">
           <div class="ui left icon input">
             <i class="user icon"></i>
-            <input type="text" name="email" placeholder="E-address">
+            <input type="text" name="email" placeholder="E-mail address">
           </div>
         </div>
         <div class="field">
