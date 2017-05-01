@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
   <!-- Site Properties -->
-  <title>Registration Page</title>
+  <title>You're Registered</title>
   <link rel="stylesheet" type="text/css" href="components/reset.css">
   <link rel="stylesheet" type="text/css" href="components/site.css">
 
@@ -44,23 +44,6 @@
       max-width: 450px;
     }
   </style>
-  <script>
-  $(document)
-    .ready(function() {
-      $('.ui.form')
-        .form({
-          inline : true,
-          on     : 'blur',
-          fields: {
-            email: 'email',
-            password: ['empty', 'minLength[5]'],
-            confirmPassword: ['match[password]']
-          }
-        })
-      ;
-    })
-  ;
-  </script>
 </head>
 <body>
 
@@ -68,37 +51,9 @@
   <div class="column">
     <h2 class="ui teal header">
       <div class="content">
-        Register an account
+        Thanks for registering!
       </div>
     </h2>
-    <form class="ui large form" action="thank-you.html">
-      <div class="ui stacked segment">
-        <div class="field">
-          <div class="ui left icon input">
-            <i class="user icon"></i>
-            <input type="text" name="email" placeholder="E-mail address">
-          </div>
-        </div>
-        <div class="field">
-          <div class="ui left icon input">
-            <i class="lock icon"></i>
-            <input type="password" name="password" placeholder="Password">
-          </div>
-        </div>
-        <div class="field">
-          <div class="ui left icon input">
-            <i class="lock icon"></i>
-            <input type="password" name="confirmPassword" placeholder="Confirm Password">
-          </div>
-        </div>
-        <button class="ui fluid large teal submit button">Register</button>
-        <a href="index.html" class="ui fluid teal basic button message">
-          Already have an account?
-        </a>
-      </div>
-
-      <div class="ui error message"></div>
-    </form>
   </div>
 </div>
 
